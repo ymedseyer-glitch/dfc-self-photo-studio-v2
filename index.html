@@ -245,6 +245,8 @@
   </div> <!-- ← THIS WAS MISSING -->
 </section>
 
+<button class="gallery-toggle" onclick="toggleGallery()">View Full Gallery</button>
+
 
 <!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
@@ -360,5 +362,34 @@
 
 
   <script src="script.js"></script>
+
+<button class="floating-btn floating-home" onclick="scrollToTop()">Home</button>
+<button class="floating-btn floating-contact" onclick="scrollToContact()">Contact Us</button>
+
+<script>
+  function toggleGallery() {
+    const grid = document.querySelector('.gallery-grid');
+    const button = document.querySelector('.gallery-toggle');
+
+    grid.classList.toggle('show-all');
+
+    if (grid.classList.contains('show-all')) {
+      button.textContent = "Hide Gallery";
+    } else {
+      button.textContent = "View Full Gallery";
+      window.scrollTo({ top: grid.offsetTop - 80, behavior: 'smooth' });
+    }
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function scrollToContact() {
+    const contact = document.querySelector('#contact');
+    contact.scrollIntoView({ behavior: 'smooth' });
+  }
+</script>
+
 </body>
 </html>

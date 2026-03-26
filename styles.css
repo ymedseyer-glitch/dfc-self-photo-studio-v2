@@ -633,6 +633,13 @@ nav a {
     height: 55px;
   }
 }
+/* CONTACT — DESKTOP DEFAULT */
+.two-column {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
 /* ===========================
    MOBILE LAYOUT (max 768px)
    =========================== */
@@ -948,4 +955,9 @@ nav a {
   padding: 0.9rem;
   font-size: 1.05rem;
   border-radius: 8px;
+}
+/* CONTACT — MOBILE */
+.two-column {
+  flex-direction: column;
+  gap: 2rem;
 }

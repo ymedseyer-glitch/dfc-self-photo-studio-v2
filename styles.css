@@ -633,12 +633,6 @@ nav a {
     height: 55px;
   }
 }
-/* CONTACT — DESKTOP DEFAULT */
-.two-column {
-  display: flex;
-  flex-direction: row;
-  gap: 3rem;
-}
 
 /* ===========================
    MOBILE LAYOUT (max 768px)
@@ -956,8 +950,91 @@ nav a {
   font-size: 1.05rem;
   border-radius: 8px;
 }
-/* CONTACT — MOBILE */
-.two-column {
-  flex-direction: column;
-  gap: 2rem;
+/* ===========================
+   CONTACT — DESKTOP (DEFAULT)
+   =========================== */
+
+.contact-peach {
+  background: linear-gradient(
+    180deg,
+    #fff5ef 0%,
+    #f7c8b0 100%
+  );
+  padding: 4rem 0;
 }
+
+/* Desktop: 2 columns */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Contact items */
+.contact-item {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.icon {
+  font-size: 1.3rem;
+  margin-right: 0.4rem;
+}
+
+/* Form inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Contact link */
+.contact-link {
+  color: #f7a98a;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   CONTACT — MOBILE (max 768px)
+   =========================== */
+
+@media (max-width: 768px) {
+
+  .contact-peach {
+    padding: 2rem 1.25rem;
+  }
+
+  /* Mobile: stack into 1 column */
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-item {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+  }
+}
+

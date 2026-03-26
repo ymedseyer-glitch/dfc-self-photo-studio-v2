@@ -786,3 +786,51 @@ nav a {
     order: 2;
   }
 }
+/* ===========================
+   SERVICES — MOBILE LAYOUT
+   =========================== */
+@media (max-width: 768px) {
+
+  /* Force all service rows to stack vertically */
+  .service-row,
+  .service-row.reverse {
+    display: flex;
+    flex-direction: column !important;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Text always first, photo always second */
+  .service-row .service-text,
+  .service-row.reverse .service-text {
+    order: 1;
+  }
+
+  .service-row .service-image,
+  .service-row.reverse .service-image {
+    order: 2;
+  }
+
+  /* Make images full-width and clean */
+  .service-row .service-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  /* Improve readability */
+  .service-text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Optional: reduce container padding for a modern mobile feel */
+  .services-container {
+    padding: 0 1rem;
+  }
+}

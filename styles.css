@@ -767,3 +767,22 @@ nav a {
     line-height: 1.6;
   }
 }
+@media (max-width: 768px) {
+
+  /* ABOUT — FORCE TEXT FIRST, PHOTO SECOND ON MOBILE */
+
+  .about-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Text always first */
+  .about-row .about-text {
+    order: 1;
+  }
+
+  /* Photo always second */
+  .about-row .about-image {
+    order: 2;
+  }
+}

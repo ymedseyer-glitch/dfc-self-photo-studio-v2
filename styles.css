@@ -733,3 +733,37 @@ nav a {
     line-height: 1.6;
   }
 }
+@media (max-width: 768px) {
+
+  /* ABOUT SECTION — FORCE ALL ROWS TO STACK */
+  .about-row,
+  .about-row.reverse {
+    display: flex;
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+
+  .about-row .about-image img,
+  .about-row.reverse .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .about-row .about-text,
+  .about-row.reverse .about-text {
+    padding: 0;
+  }
+
+  .about-row .about-text h3,
+  .about-row.reverse .about-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-row .about-text p,
+  .about-row.reverse .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}

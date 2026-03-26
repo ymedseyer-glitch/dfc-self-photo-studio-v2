@@ -670,3 +670,37 @@ nav a {
     line-height: 1.6;
   }
 }
+@media (max-width: 768px) {
+
+  /* ABOUT SECTION — MOBILE */
+  .about-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .about-text {
+    padding: 0;
+  }
+
+  .about-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Optional: improve spacing for the whole section */
+  .about-container {
+    padding: 1.5rem 1rem;
+  }
+}

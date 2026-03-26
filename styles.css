@@ -633,3 +633,40 @@ nav a {
     height: 55px;
   }
 }
+/* ===========================
+   MOBILE LAYOUT (max 768px)
+   =========================== */
+@media (max-width: 768px) {
+
+}
+@media (max-width: 768px) {
+
+  /* ABOUT SECTION — MOBILE */
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .about-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .about-text {
+    text-align: left;
+    padding: 0;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}

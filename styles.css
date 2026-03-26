@@ -894,3 +894,7 @@ nav a {
 .floating-home {
   left: 20px;
 }
+.gallery-toggle {
+  margin-top: 1.5rem;   /* lifts the button upward */
+  margin-bottom: 2rem;  /* keeps safe distance from floating buttons */
+}

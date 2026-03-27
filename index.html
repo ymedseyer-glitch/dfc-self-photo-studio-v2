@@ -317,22 +317,30 @@
 
       <form class="contact-form" action="https://formsubmit.co/ymedseyer@gmail.com" method="POST">
 
-        <label for="name">Name</label>
-        <input id="name" type="text" name="name" required>
+  <label for="name">Name</label>
+  <input id="name" type="text" name="name" required>
 
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required>
+  <label for="email">Email</label>
+  <input id="email" type="email" name="email" required>
 
-        <label for="phone">Cellphone Number</label>
-        <input id="phone" type="text" name="phone" required>
+  <label for="phone">Cellphone Number</label>
+  <input id="phone" type="text" name="phone" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="4" required></textarea>
 
-        <input type="hidden" name="_captcha" value="false">
+  <!-- ENABLE CAPTCHA -->
+  <input type="hidden" name="_captcha" value="true">
 
-        <button class="btn-primary">Submit</button>
-      </form>
+  <!-- REDIRECT TO THANK YOU PAGE -->
+  <input type="hidden" name="_next" value="https://dfcstudio.net/thankyou.html">
+
+  <!-- OPTIONAL: EMAIL SUBJECT -->
+  <input type="hidden" name="_subject" value="New Message from DFC Studio Website">
+
+  <button class="btn-primary">Submit</button>
+</form>
+
     </div>
 
   </div>

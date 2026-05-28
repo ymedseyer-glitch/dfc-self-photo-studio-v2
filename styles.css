@@ -1060,4 +1060,29 @@ nav a {
   font-size: 1.1rem;
   margin-bottom: 20px;
 }
+/* Floating Announcement Badge */
+.announcement-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  backdrop-filter: blur(6px);
+  z-index: 20;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .announcement-badge {
+    top: 12px;
+    right: 12px;
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+}
 

@@ -6,16 +6,9 @@
   </head>
   <body>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <!-- Pre-bundled CMS build (works on Azure) -->
+
+    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3/dist/decap-cms.js"></script>
-    <script>
-      window.CMS_MANUAL_INIT = true;
-      CMS.init({
-        config: {
-          load_config_file: true,
-          config_path: "/admin/config.yml"
-        }
-      });
-    </script>
+
   </body>
 </html>

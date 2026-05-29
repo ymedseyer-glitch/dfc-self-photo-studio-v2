@@ -30,9 +30,9 @@ collections:
           - { label: "Promo Active?", name: "promo", widget: "boolean", default: false }
           - { label: "Promo Text", name: "promo_text", widget: "string", required: false }
 
-  # 3. GALLERY ITEMS (individual files)
+  # 3. GALLERY ITEMS (folder collection)
   - name: "gallery"
-    label: "Gallery"
+    label: "Gallery Items"
     folder: "content/gallery/items"
     create: true
     slug: "{{slug}}"
@@ -40,7 +40,7 @@ collections:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Caption", name: "caption", widget: "string", required: false }
 
-  # 4. GALLERY INDEX (JSON list)
+  # 4. GALLERY INDEX (file collection)
   - name: "gallery_index"
     label: "Gallery Index"
     file: "content/gallery/gallery.json"

@@ -62,9 +62,36 @@ function setStatus(status) {
     badge.textContent = "🟡 Fully Booked Today — Sorry!";
   }
 }
-// OPTIONS:
-// setStatus('open');
-// setStatus('closed');
-// setStatus('fully-booked');
+fetch('/content/announcement.json')
+  .then(res => res.json())
+  .then(data => {
+    setStatus(data.status);
+    const badge = document.getElementById('announcement');
+    const icon = data.status === 'open' ? '🟢' : data.status === 'closed' ? '🔴' : '🟡';
+    badge.textContent = `${icon} ${data.message}`;
+  });
+fetch('/content/services.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('services-list');
+    container.innerHTML = data.items.map(item => `
+      <div class="service-card">
+        <h3>${item.title}</h3>
+        <p>${item.description}</p>
+        ${item.promo ? `<p class="promo">${item.promo_text}</p>` : ''}
+        ${item.price ? `<p class="price">${item.price}</p>` : ''}
+      </div>
+    `).join('');
+  });
+fetch('/content/gallery')
+  .then(res => res.json())
+  .then(files => Promise.all(
+    files.map(file => fetch(`/content/gallery/${file}`).then(r => r.json()))
+  ))
+  .then(images => {
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = images.map(img => `
+      <img src="${img.image}" alt="${img.caption || ''}">
+    `).join('');
+  });
 
-setStatus('open');  // ← change this anytime

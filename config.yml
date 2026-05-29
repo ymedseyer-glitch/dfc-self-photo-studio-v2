@@ -8,46 +8,52 @@ public_folder: "/assets/images/uploads"
 collections:
   - name: announcement
     label: Announcement Badge
-    file: content/announcement.json
-    fields:
-      - label: Status
-        name: status
-        widget: select
-        options: ["open", "closed", "fully-booked"]
-      - label: Message
-        name: message
-        widget: string
+    files:                          # ← wrap in files list
+      - label: Announcement Badge
+        name: announcement
+        file: content/announcement.json
+        fields:
+          - label: Status
+            name: status
+            widget: select
+            options: ["open", "closed", "fully-booked"]
+          - label: Message
+            name: message
+            widget: string
 
   - name: services
     label: Services
-    file: content/services.json
-    fields:
-      - label: Services List
-        name: items
-        widget: list
+    files:                          # ← wrap in files list
+      - label: Services
+        name: services
+        file: content/services.json
         fields:
-          - label: Title
-            name: title
-            widget: string
-          - label: Description
-            name: description
-            widget: text
-          - label: Price
-            name: price
-            widget: string
-            required: false
-          - label: Promo Active?
-            name: promo
-            widget: boolean
-            default: false
-          - label: Promo Text
-            name: promo_text
-            widget: string
-            required: false
+          - label: Services List
+            name: items
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Price
+                name: price
+                widget: string
+                required: false
+              - label: Promo Active?
+                name: promo
+                widget: boolean
+                default: false
+              - label: Promo Text
+                name: promo_text
+                widget: string
+                required: false
 
   - name: gallery
     label: Gallery Items
-    folder: content/gallery/items
+    folder: content/gallery/items   # ← this one is fine, folder collection
     create: true
     slug: "{{slug}}"
     fields:
@@ -61,12 +67,15 @@ collections:
 
   - name: gallery_index
     label: Gallery Index
-    file: content/gallery/gallery.json
-    fields:
-      - label: Items
-        name: items
-        widget: list
+    files:                          # ← wrap in files list
+      - label: Gallery Index
+        name: gallery_index
+        file: content/gallery/gallery.json
         fields:
-          - label: File
-            name: file
-            widget: string
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - label: File
+                name: file
+                widget: string

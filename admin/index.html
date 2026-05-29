@@ -7,12 +7,12 @@
   <body>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <!-- Modern CMS build -->
-    <script src="https://unpkg.com/netlify-cms-app@^2.15.0/dist/netlify-cms-app.js"></script>
+    <!-- Latest CMS build -->
+    <script src="https://unpkg.com/netlify-cms-app/dist/netlify-cms-app.js"></script>
 
     <script>
       window.CMS_MANUAL_INIT = true;
-      NetlifyCmsApp.init({
+      CMS.init({
         config: {
           load_config_file: true,
           config_path: "/admin/config.yml"

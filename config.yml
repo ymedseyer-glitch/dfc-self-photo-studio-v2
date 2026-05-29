@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: ymedseyer-glitch/dfc-self-photo-studio-v2
   branch: feature/test
 
 media_folder: "assets/images/uploads"

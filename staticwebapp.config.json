@@ -2,5 +2,11 @@
   "mimeTypes": {
     ".yml": "text/yaml",
     ".yaml": "text/yaml"
-  }
+  },
+  "routes": [
+    {
+      "route": "/admin/config.yml",
+      "allowedRoles": ["anonymous"]
+    }
+  ]
 }

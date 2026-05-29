@@ -6,47 +6,67 @@ media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
 collections:
-
-  # 1. ANNOUNCEMENT BADGE
-  - name: "announcement"
-    label: "Announcement Badge"
-    file: "content/announcement.json"
+  - name: announcement
+    label: Announcement Badge
+    file: content/announcement.json
     fields:
-      - { label: "Status", name: "status", widget: "select", options: ["open", "closed", "fully-booked"] }
-      - { label: "Message", name: "message", widget: "string" }
+      - label: Status
+        name: status
+        widget: select
+        options: ["open", "closed", "fully-booked"]
+      - label: Message
+        name: message
+        widget: string
 
-  # 2. SERVICES SECTION
-  - name: "services"
-    label: "Services"
-    file: "content/services.json"
+  - name: services
+    label: Services
+    file: content/services.json
     fields:
-      - label: "Services List"
-        name: "items"
-        widget: "list"
+      - label: Services List
+        name: items
+        widget: list
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Price", name: "price", widget: "string", required: false }
-          - { label: "Promo Active?", name: "promo", widget: "boolean", default: false }
-          - { label: "Promo Text", name: "promo_text", widget: "string", required: false }
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: text
+          - label: Price
+            name: price
+            widget: string
+            required: false
+          - label: Promo Active?
+            name: promo
+            widget: boolean
+            default: false
+          - label: Promo Text
+            name: promo_text
+            widget: string
+            required: false
 
-  # 3. GALLERY ITEMS (folder collection)
-  - name: "gallery"
-    label: "Gallery Items"
-    folder: "content/gallery/items"
+  - name: gallery
+    label: Gallery Items
+    folder: content/gallery/items
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Caption", name: "caption", widget: "string", required: false }
+      - label: Image
+        name: image
+        widget: image
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
 
-  # 4. GALLERY INDEX (file collection)
-  - name: "gallery_index"
-    label: "Gallery Index"
-    file: "content/gallery/gallery.json"
+  - name: gallery_index
+    label: Gallery Index
+    file: content/gallery/gallery.json
     fields:
-      - label: "Items"
-        name: "items"
-        widget: "list"
+      - label: Items
+        name: items
+        widget: list
         fields:
-          - { label: "File", name: "file", widget: "string" }
+          - label: File
+            name: file
+            widget: string

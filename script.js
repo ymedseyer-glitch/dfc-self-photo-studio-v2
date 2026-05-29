@@ -67,4 +67,4 @@ function setStatus(status) {
 // setStatus('closed');
 // setStatus('fully-booked');
 
-setStatus('fully-booked');  // ← change this anytime
+setStatus('open');  // ← change this anytime

@@ -40,3 +40,31 @@ lightbox.addEventListener("click", (e) => {
     lightbox.style.display = "none";
   }
 });
+function setStatus(status) {
+  const badge = document.getElementById('announcement');
+
+  if (!badge) return;
+
+  // Remove all status classes
+  badge.classList.remove('open', 'closed', 'fully-booked');
+
+  // Apply the new status
+  badge.classList.add(status);
+
+  // Update text + icon
+  if (status === 'open') {
+    badge.textContent = "🟢 We are Open Today 9am to 7pm — Walk-ins Welcome!";
+  }
+  if (status === 'closed') {
+    badge.textContent = "🔴 Closed Today — See you tomorrow!";
+  }
+  if (status === 'fully-booked') {
+    badge.textContent = "🟡 Fully Booked Today — Sorry!";
+  }
+}
+// OPTIONS:
+// setStatus('open');
+// setStatus('closed');
+// setStatus('fully-booked');
+
+setStatus('open');  // ← change this anytime

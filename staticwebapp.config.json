@@ -11,6 +11,10 @@
     {
       "route": "/admin/config.yml*",
       "allowedRoles": ["anonymous"]
+    },
+    {
+      "route": "/admin/*",
+      "allowedRoles": ["anonymous"]
     }
   ]
 }

@@ -5,21 +5,14 @@
   },
   "routes": [
     {
-      "route": "/admin/config.yml",
+      "route": "/cms/config.yml",
       "allowedRoles": ["anonymous"],
       "headers": {
         "Access-Control-Allow-Origin": "*"
       }
     },
     {
-      "route": "/admin/config.yml*",
-      "allowedRoles": ["anonymous"],
-      "headers": {
-        "Access-Control-Allow-Origin": "*"
-      }
-    },
-    {
-      "route": "/admin/*",
+      "route": "/cms/*",
       "allowedRoles": ["anonymous"],
       "headers": {
         "Access-Control-Allow-Origin": "*"

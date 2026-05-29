@@ -94,4 +94,14 @@ fetch('/content/gallery')
       <img src="${img.image}" alt="${img.caption || ''}">
     `).join('');
   });
+// Load gallery items from gallery.json
+fetch('/content/gallery/gallery.json')
+  .then(res => res.json())
+  .then(data => {
+    const gallery = document.getElementById('gallery');
+
+    gallery.innerHTML = data.items.map(item => `
+      <img src="${item.image}" alt="${item.caption || ''}">
+    `).join('');
+  });
 

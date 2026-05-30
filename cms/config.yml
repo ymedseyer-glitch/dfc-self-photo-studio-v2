@@ -9,7 +9,7 @@ public_folder: "/assets/images/uploads"
 collections:
   - name: announcement
     label: Announcement Badge
-    files:                          # ← wrap in files list
+    files:
       - label: Announcement Badge
         name: announcement
         file: content/announcement.json
@@ -24,7 +24,7 @@ collections:
 
   - name: services
     label: Services
-    files:                          # ← wrap in files list
+    files:
       - label: Services
         name: services
         file: content/services.json
@@ -54,7 +54,7 @@ collections:
 
   - name: gallery
     label: Gallery Items
-    folder: content/gallery/items   # ← this one is fine, folder collection
+    folder: content/gallery/items
     create: true
     slug: "{{slug}}"
     fields:
@@ -68,7 +68,7 @@ collections:
 
   - name: gallery_index
     label: Gallery Index
-    files:                          # ← wrap in files list
+    files:
       - label: Gallery Index
         name: gallery_index
         file: content/gallery/gallery.json

@@ -3,7 +3,7 @@ backend:
   name: github
   repo: ymedseyer-glitch/dfc-self-photo-studio-v2
   branch: feature/test
-  auth_type: implicit
+  auth_type: pkce
   app_id: Ov23likPCwfFyLBr3JAW
 
 media_folder: "assets/images/uploads"

@@ -2,8 +2,8 @@ backend:
   name: github
   repo: ymedseyer-glitch/dfc-self-photo-studio-v2
   branch: feature/test
-  base_url: https://dfc-oauth-provider.ymedseyer.workers.dev
-  auth_endpoint: auth
+  base_url: "https://dfc-oauth-provider.ymedseyer.workers.dev"
+  auth_endpoint: "authorize"
 
 media_folder: "assets/images/uploads"
 public_folder: "/assets/images/uploads"

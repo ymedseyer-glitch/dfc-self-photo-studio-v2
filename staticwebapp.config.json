@@ -1,0 +1,29 @@
+{
+  "mimeTypes": {
+    ".yml": "text/yaml",
+    ".yaml": "text/yaml"
+  },
+  "routes": [
+    {
+      "route": "/cms/config.yml",
+      "allowedRoles": ["anonymous"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "route": "/cms/callback",
+      "allowedRoles": ["anonymous"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    },
+    {
+      "route": "/cms/*",
+      "allowedRoles": ["anonymous"],
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      }
+    }
+  ]
+}

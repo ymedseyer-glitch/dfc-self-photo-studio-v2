@@ -1,0 +1,84 @@
+backend:
+  name: github
+  repo: ymedseyer-glitch/dfc-self-photo-studio-v2
+  branch: feature/test
+  base_url: "https://dfc-oauth-provider.ymedseyer.workers.dev"
+  auth_endpoint: "authorize"
+
+media_folder: "assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+collections:
+  - name: announcement
+    label: Announcement Badge
+    files:
+      - label: Announcement Badge
+        name: announcement
+        file: content/announcement.json
+        fields:
+          - label: Status
+            name: status
+            widget: select
+            options: ["open", "closed", "fully-booked"]
+          - label: Message
+            name: message
+            widget: string
+
+  - name: services
+    label: Services
+    files:
+      - label: Services
+        name: services
+        file: content/services.json
+        fields:
+          - label: Services List
+            name: items
+            widget: list
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Price
+                name: price
+                widget: string
+                required: false
+              - label: Promo Active?
+                name: promo
+                widget: boolean
+                default: false
+              - label: Promo Text
+                name: promo_text
+                widget: string
+                required: false
+
+  - name: gallery
+    label: Gallery Items
+    folder: content/gallery/items
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Image
+        name: image
+        widget: image
+      - label: Caption
+        name: caption
+        widget: string
+        required: false
+
+  - name: gallery_index
+    label: Gallery Index
+    files:
+      - label: Gallery Index
+        name: gallery_index
+        file: content/gallery/gallery.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            fields:
+              - label: File
+                name: file
+                widget: string
